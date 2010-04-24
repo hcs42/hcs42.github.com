@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type"
+    content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="http://www.linux-on-laptops.com/favicon.ico">
+    <title>Linux on Laptops</title>
+  </head>
+  <body>
+    <HR NOSHADE>
+    <TABLE ALIGN=CENTER CELLPADDING=0 CELLSPACING=0><TR><TD>
+          <STRONG><FONT SIZE=2>
+              <A HREF="http://www.linux-on-laptops.com/">Linux Laptops Home</A>
+          </FONT></STRONG>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </TD></TR></TABLE>
+    <HR NOSHADE>
+    <div align="center">
+      <h1>Installing Ubuntu 9.10 (Karmic Koala) on
+        <a href="http://www.notebook.hu/notebook/dell/vostro/dell-vostro-a860-111877">Dell Vostro A860</a></h1>
+      <p>Last updated: 2010-04-24</p>
+    </div>
+    <p>General Hardware Specifications of Dell Vostro A860:</p>
+    <table border="1" width="100%">
+      <tbody>
+        <tr>
+          <td width="33%">
+            <div class="headings" align="center">Hardware Components</div>
+          </td>
+          <td width="33%">
+            <div class="headings" align="center">Status under Linux</div>
+          </td>
+          <td width="33%">
+            <div class="headings" align="center">Notes</div>
+          </td>
+        </tr>
+        <tr>
+          <td width="33%">Intel® GM965 Express chipset</td>
+          <td width="33%">Works</td>
+          <td width="33%">No special procedure required during installation.</td>
+        </tr>
+        <tr>
+          <td width="33%">Mobile Intel® Core™ 2 Duo T5870, 2000 MHz</td>
+          <td width="33%">Works</td>
+          <td width="33%">No special procedure required during installation.</td>
+        </tr>
+        <tr>
+          <td width="33%">15.6" WXGA HD Display (1366x768)</td>
+          <td width="33%">Works</td>
+          <td width="33%">No special procedure required during installation.</td>
+        </tr>
+        <tr>
+          <td width="33%">Intel Graphics x3100</td>
+          <td width="33%">Works</td>
+          <td width="33%">Haven't tried 3D games...</td>
+        </tr>
+        <tr>
+          <td width="33%">2048MB DDR2/800MHz RAM</td>
+          <td width="33%">Works</td>
+          <td width="33%">No special procedure required during installation</td>
+        </tr>
+        <tr>
+          <td width="33%">250GB 5400RPM SATA Hard Drive</td>
+          <td width="33%">Works</td>
+          <td width="33%">No special procedure required during installation</td>
+        </tr>
+        <tr>
+          <td width="33%">8x DVD+-RW DL drive</td>
+          <td width="33%">Works</td>
+          <td width="33%">No special procedure required during installation</td>
+        </tr>
+        <tr>
+          <td width="33%">Integrated Sound Card</td>
+          <td width="33%">Works</td>
+          <td width="33%">No special procedure required during installation</td>
+        </tr>
+        <tr>
+          <td width="33%">10/100mbps LAN Integrated Network Card</td>
+          <td width="33%">Works</td>
+          <td width="33%">No special procedure required during installation</td>
+        </tr>
+        <tr>
+          <td width="33%">Wireless 802.11b/g</td>
+          <td width="33%">Works</td>
+          <td width="33%">The Network Manager of Kubuntu was unable to connect to
+            my WPA encrypted wireless network. Ubuntu had no such problem.</td>
+        </tr>
+        <tr>
+          <td width="33%">5in1 Card reader</td>
+          <td width="33%">Works</td>
+          <td width="33%">Tried only with SD Card</td>
+        </tr>
+        <tr>
+          <td width="33%">Bluetooth interface</td>
+          <td width="33%">Doesn't work due to <a href="https://bugs.launchpad.net/ubuntu/+source/gvfs/+bug/310231">this bug</a></td>
+          <td width="33%">The Bluetooth and the phone find each other, but the data transfer does not work.</td>
+        </tr>
+        <tr>
+          <td width="33%">FireWire I-link</td>
+          <td width="33%">Haven't tried</td>
+          <td width="33%"></td>
+        </tr>
+        <tr>
+          <td width="33%">PCMCIA (PC Card)</td>
+          <td width="33%">Haven't tried</td>
+          <td width="33%"></td>
+        </tr>
+        <tr>
+          <td width="33%">USB 2.0 (2 slots)</td>
+          <td width="33%">Works</td>
+          <td width="33%">No special procedure required during installation. The
+            laptop can boot from a USB flash drive.</td>
+        </tr>
+        <tr>
+          <td width="33%">External VGA interface</td>
+          <td width="33%">Works</td>
+          <td width="33%">External monitor can be plugged in when the OS is already running.
+            "System &gt; Preferences &gt; Display" works fine. Both the external
+            monitor and the laptop's own screen can run at the same time. If you
+            want the external screen to be the left one, first turn off the
+            laptop's own screen (from "System &gt; Preferences &gt; Display"), then
+            turn it on again.</td>
+        </tr>
+        <tr>
+          <td width="33%">4200 mAh Lithium-Ion Battery</td>
+          <td width="33%">Works</td>
+          <td width="33%">No special procedure required during installation. The
+            battery life is around 3 and a half hours.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>This laptop is operating under Kernel version 2.6.31. I tried both the
+    32bit and the 64bit versions; there is not much difference.</p>
+    <div class="headings">Unresolved issues</div>
+    <ul>
+      <li>Hibernate does not work. Suspend to RAM works.
+      <a href="http://febaen.blogspot.com/2008/12/installing-ubuntu-on-dell-vostro-a860.html">Another
+        Dell Vostro A860 review</a> writes that "After hibernating, I was unable to
+      reconnect to a network until rebooting. Again, might be a coincidence". I
+      had the same issue when I used the "hibernate" command.
+      </li>
+      <li>Adobe Flash usually works (rarely Youtube videos have to be reloaded).</li>
+      <li>If I close the lid, the screen goes turns off for a second, then it turns
+      on again, so it is unnecessarily on.</li>
+    </ul>
+    <div class="headings">Notes</div>
+    <ul>
+      <li>I used <a href="http://www2.webkit.org/perf/sunspider-0.9">Sunspider</a> to test the speed of browsers. The results were the following (the less the number the faster the browser is):
+      <table border="1">
+        <tr><td>Chrome 32bit</td><td> 598-616</td></tr>
+        <tr><td>Chrome 64bit</td><td> 602-630</td></tr>
+        <tr><td>Firefox 32bit</td><td> 1545-1619</td></tr>
+        <tr><td>Firefox 64bit</td><td> 2818-3008</td></tr>
+      </table></li>
+      <li>Generally the laptop works fine :)</li>
+    </ul>
+  </body>
+</html>
